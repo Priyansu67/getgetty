@@ -8,7 +8,7 @@
 }
 
 input[type="text"] {
-  width: 100%;
+  width: 80%;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
@@ -25,6 +25,8 @@ input[type="text"]:focus {
 
 button {
   width: 10%;
+  text-align: center;
+  min-width: 100px;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
