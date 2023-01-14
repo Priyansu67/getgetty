@@ -1,9 +1,12 @@
-import React from 'react';
+import React,{useState} from 'react';
 import axios from "axios";
 import Jimp from "jimp";
 const client = axios.create();
 
+
 const DragAndDrop = () => {
+
+  const [inputUrl, setInputUrl] = useState('');
 
 
   const handleDragEnter = e => {
@@ -20,6 +23,20 @@ const DragAndDrop = () => {
     e.stopPropagation();
   };
 
+  const handleSubmit = async e => { 
+    e.preventDefault();
+    if(inputUrl === '') {
+      alert('Please enter a URL');
+    }
+    else if(!inputUrl.includes('media.gettyimages.com/')){
+      alert('Please enter a Getty Images URL');
+    }
+    else{
+      let id = idFromURL(inputUrl);
+    await getty(id);
+    }
+  };
+
   const handleDrop = async e => {
     e.preventDefault();
     var imageUrl = e.dataTransfer.getData('text/html');
@@ -34,14 +51,20 @@ const DragAndDrop = () => {
   };
 
   return (
+    <>
+    <form className='form' onSubmit={e => handleSubmit(e)}>
+      <input type='text' name='inputurl' value={inputUrl} onChange={e => setInputUrl(e.target.value)} placeholder='Enter Getty Image URL' />
+      <button type='submit'>Download</button>
+    </form>
     <div className='drag-drop-zone inside-drag-area'
       onDrop={e => handleDrop(e)}
       onDragOver={e => handleDragOver(e)}
       onDragEnter={e => handleDragEnter(e)}
       onDragLeave={e => handleDragLeave(e)}
-    >
+      >
       <p>Drag Image Here To Download</p>
     </div>
+      </>
   );
 };
 
@@ -58,10 +81,7 @@ function isGettyID(input) {
 }
 
 function idFromURL(link) {
-    const url = new URL(link);
-    const path = url.pathname.split("/");
-    const id = path[path.length - 1];
-    console.log(id)
+    const id = link.split("/")[4].split("?")[0];
     if (!isGettyID(id)) {
         console.log(`Invalid URL: ${link}`);
         process.exit(1);

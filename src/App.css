@@ -7,6 +7,42 @@
   
 }
 
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 200;
+  margin: 0.5rem;
+  color: #ccc;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 1px solid gold;
+}
+
+button {
+  width: 10%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 200;
+  margin-top: 1rem;
+  background-color: gold;
+  color: black;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: #3b3b3b;
+  color: gold;
+  border: 1px solid gold;
+}
+
 .desc{
   color: white;
   font-size: 1.5rem;
