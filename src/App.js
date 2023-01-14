@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import DragAndDrop from './DragAndDrop'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Getty Image Downloader</h1>
+      <p className='desc'>Website to download 2048px Getty Images</p>
+      <DragAndDrop />
+      <h2 className='footer'>Made by Priyansu Choudhury</h2>
     </div>
   );
 }
