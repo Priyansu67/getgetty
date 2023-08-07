@@ -4,10 +4,10 @@ import GCLogo from "@/components/gclogo";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="animate-text pb-3 font-bold text-center text-7xl bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 tracking-wider">
-        G<span className="text-5xl">ET</span>G
-        <span className="text-5xl">ETTY</span>
+    <main className="flex min-h-screen flex-col items-center justify-between p-8 md:p-24">
+      <h1 className="animate-text pb-3 font-bold text-center text-4xl sm:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 tracking-wider">
+        G<span className="text-2xl sm:text-5xl">ET</span>G
+        <span className="text-2xl sm:text-5xl">ETTY</span>
       </h1>
 
       <div
