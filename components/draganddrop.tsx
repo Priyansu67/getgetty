@@ -58,7 +58,7 @@ const DragAndDrop = () => {
       <form 
       className="w-full mx-auto mt-10"
       onSubmit={(e) => handleSubmit(e)}>
-<span className="w-full text-center text-lg text-red-500">Alert: Recently, GettyImages patched their code and there is no more solution to bypass the code.I'm sorry😢</span>
+<span className="w-full text-center text-lg text-red-500 mb-2 flex justify-center items-center">Alert: Recently, GettyImages patched their code and there is no more solution to bypass the code.I'm sorry😢</span>
         <div
             className="flex flex-col sm:flex-row gap-2 mb-4"
         >
