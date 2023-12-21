@@ -6,14 +6,14 @@ import Script from "next/script";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-8 md:p-24 max-h-screen">
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-1MBYEL1SQK" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-9MHEN6WJ1P" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
         
-          gtag('config', 'G-1MBYEL1SQK');
+          gtag('config', 'G-9MHEN6WJ1P');
         `}
       </Script>
       <h1 className="animate-text pb-3 font-bold text-center text-4xl sm:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 tracking-wider">
