@@ -10,7 +10,7 @@ export default function Home() {
         <span className="text-2xl sm:text-5xl">ETTY</span>
       </h1>
 
-{/*       <div
+      <div
         onClick={() =>
           window.open(
             "https://chrome.google.com/webstore/detail/getgetty-extension/kkioljeeheopjbpoidhbmmbmehpgigon",
@@ -27,7 +27,7 @@ export default function Home() {
             <p className="text-white text-[0.7rem]">Chrome Web Store</p>
           </div>
         </div>
-      </div> */}
+      </div>
       <DragAndDrop />
       <h1
         onClick={() =>
