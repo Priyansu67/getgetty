@@ -1,8 +1,15 @@
 "use client";
 import DragAndDrop from "@/components/draganddrop";
 import GCLogo from "@/components/gclogo";
+import { useEffect } from "react";
+import ReactGA from "react-ga";
 
 export default function Home() {
+  
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-8 md:p-24 max-h-screen">
       <h1 className="animate-text pb-3 font-bold text-center text-4xl sm:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 tracking-wider">
@@ -30,17 +37,10 @@ export default function Home() {
       </div>
       <DragAndDrop />
       <h1
-        onClick={() =>
-          window.open(
-            "https://priyansu.in",
-            "_blank"
-          )
-        }
+        onClick={() => window.open("https://priyansu.in", "_blank")}
         className="mt-2 text-center cursor-pointer hover:text-gray-200 border border-gray-300 border-opacity-50 hover:border-opacity-100 p-2 rounded-lg"
       >
-      
-      Priyansu Choudhury
-     
+        Priyansu Choudhury
       </h1>
     </main>
   );
