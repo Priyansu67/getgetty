@@ -58,7 +58,7 @@ const DragAndDrop = () => {
       <form 
       className="w-full mx-auto mt-10"
       onSubmit={(e) => handleSubmit(e)}>
-Ï        <div
+        <div
             className="flex flex-col sm:flex-row gap-2 mb-4"
         >
         <input
